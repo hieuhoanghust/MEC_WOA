@@ -1,0 +1,1 @@
+modify and run 'setParameters.m' and save variables to 'paramters2.mat'

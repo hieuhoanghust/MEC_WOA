@@ -1,0 +1,4 @@
+20 UEs, 7 SBSs, 5 Subchannels
+P_SBS^max = 16 
+gamma_th  = 1.001
+1 realization
