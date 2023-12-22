@@ -16,10 +16,10 @@ noBSs   = M_ul + M_dl;
 noSubcs = 5;
 noAnten = 4;
 
-noRealizations = 3; %200
+noRealizations = 200; 
 params.noRealizations = noRealizations;
 
-C_n_sample = 0.5:0.5:2.5; %1:1:5; % x1e9
+C_n_sample = 0.5:0.5:2.5; % x1e9
 params.D_n = 0.42*1e6;
 doTol = 1; 
 
@@ -232,13 +232,13 @@ for iN = 1:length(C_n_sample)
         %                == offloading percentage (not consider circumstances with no UL UE)
         su_OFDMA(iN, iReal) = OFDMA_BWOA_result.leader_score;
     end 
-    WOA_BWOA.po(iN,1) = mean(po_WOA_BWOA_iN); 
-    IWOA_BWOA.po(iN,1) = mean(po_IWOA_BWOA_iN); 
-    PSO_BWOA.po(iN,1) = mean(po_PSO_BWOA_iN);
-    
-    IOJOA.po(iN,1) = mean(po_IOJOA_iN);
-
-    OFDMA.po(iN,1) = mean(po_OFDMA_iN);
+    % WOA_BWOA.po(iN,1) = mean(po_WOA_BWOA_iN); 
+    % IWOA_BWOA.po(iN,1) = mean(po_IWOA_BWOA_iN); 
+    % PSO_BWOA.po(iN,1) = mean(po_PSO_BWOA_iN);
+    % 
+    % IOJOA.po(iN,1) = mean(po_IOJOA_iN);
+    % 
+    % OFDMA.po(iN,1) = mean(po_OFDMA_iN);
 end 
 
 ALCA.su = mean(su_ALCA, 2);
@@ -253,7 +253,7 @@ IOJOA.su = mean(su_IOJOA, 2);
 
 OFDMA.su = mean(su_OFDMA, 2);
 
-save('results\new\Script_Cn_1.mat', 'C_n_sample', 'users_no', ...
+save('results\new\Script_Cn.mat', 'C_n_sample', 'users_no', ...
      'ALCA','WOA_BWOA', "IWOA_BWOA", "PSO_BWOA", "ARJOA", "IOJOA", "OFDMA");
 
 toc 
