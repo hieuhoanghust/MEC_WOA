@@ -16,7 +16,7 @@ noBSs   = M_ul + M_dl;
 noSubcs = 5;
 noAnten = 4;
 
-noRealizations = 3; %200
+noRealizations = 200; 
 params.noRealizations = noRealizations;
 
 F0  = 10:2:16;
@@ -247,13 +247,13 @@ for iN = 1:length(F0)
         su_OFDMA(iN, iReal) = OFDMA_BWOA_result.leader_score;
 
     end
-    WOA_BWOA.po(iN,1) = mean(po_WOA_BWOA_iN); 
-    IWOA_BWOA.po(iN,1) = mean(po_IWOA_BWOA_iN); 
-    PSO_BWOA.po(iN,1) = mean(po_PSO_BWOA_iN);
-    
-    IOJOA.po(iN,1) = mean(po_IOJOA_iN);
-
-    OFDMA.po(iN,1) = mean(po_OFDMA_iN);
+    % WOA_BWOA.po(iN,1) = mean(po_WOA_BWOA_iN); 
+    % IWOA_BWOA.po(iN,1) = mean(po_IWOA_BWOA_iN); 
+    % PSO_BWOA.po(iN,1) = mean(po_PSO_BWOA_iN);
+    % 
+    % IOJOA.po(iN,1) = mean(po_IOJOA_iN);
+    % 
+    % OFDMA.po(iN,1) = mean(po_OFDMA_iN);
 end
 ALCA.su = mean(su_ALCA, 2);
 
