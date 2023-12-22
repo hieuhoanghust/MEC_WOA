@@ -127,5 +127,5 @@ EX.po = mean(po_EX, 2);
 EX.su = mean(su_EX, 2);
 EX.time = mean(time_EX, 2);
 
-save('results\Script_compare7.mat', 'BWOA', 'EX', 'NoUsers','sys_voronoi', 'M_dl', 'noSubcs');
+save('results\Script_compare.mat', 'BWOA', 'EX', 'NoUsers','sys_voronoi', 'noBSs', 'noSubcs');
 
