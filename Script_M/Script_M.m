@@ -14,7 +14,7 @@ M_dl = 3;
 noSubcs = 5;
 noAnten = 4;
 
-noRealizations = 3; % 200;
+noRealizations = 200;
 params.noRealizations = noRealizations;
 
 doTol = 1;
@@ -56,6 +56,7 @@ for iN = 1:length(M_UL)
     
     for iReal = 1:noRealizations
         fprintf('iM:%i/%i   iReal:%i/%i\n', M_UL(iN), M_UL(length(M_UL)), iReal, noRealizations);
+        % ======
         UEs.total = [4 6 10];
         while UEs.total(1) ~= UEs.total(2) % force N_ul = N_dl trick to get average quicker
             [UE_BS, UEs, BS] = location_voronoi(users_no, M_ul, M_dl, 0);
@@ -72,6 +73,9 @@ for iN = 1:length(M_UL)
             %       BS.total = [M_ul M_dl M]
             %       BS.d     == M x M == distances between SBSs and DL SBSs
         end
+        % ======
+        % [UE_BS, UEs, BS] = location_voronoi(users_no, M_ul, M_dl, 0);
+            
         N_ul = UEs.total(1);
 
         [ChannelGain, ~] = channelMod(UEs, BS, noAnten, noSubcs, logNormalMean, logNormalDeviation);
