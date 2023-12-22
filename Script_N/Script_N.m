@@ -8,7 +8,7 @@ addpath('..\Generate\')
 addpath('..\')
 load('..\Parameters\parameters2.mat')
 % noSearchAgents = 30;
-NoUsers = 16:6:28; %4:6:28 ;
+NoUsers = 4:6:28; %4:6:28 ;
 M_ul = 3; 
 M_dl = 3;
 noBSs   = M_ul + M_dl;
@@ -18,9 +18,9 @@ noAnten = 4;
 params.noSubcs = noSubcs;
 params.noAnten = noAnten;
 params.noBSs   = noBSs;
-params.maxIter = 800;
+params.maxIter = 1500;
 
-params.noRealizations = 3; %10; %200
+params.noRealizations = 200;
 noRealizations = params.noRealizations;
 
 doTol = 1; % result tolerant: 1 for early break / 0 to run all iterations
@@ -237,17 +237,10 @@ for iN = 1:length(NoUsers)
         su_OFDMA(iN, iReal) = OFDMA_BWOA_result.leader_score;
                
     end
-    
-    ALCA.BWOA_result{iN}  = ALCA_BWOA_result; % del
 
     ARJOA.po(iN,1) = mean(po_WOA_BWOA_iN); % should be all ones
-    ARJOA.BWOA_result{iN} = ARJOA_BWOA_result; % del
-    ARJOA.WOA_result{iN}  = ARJOA_WOA_result; % del
 
     WOA_BWOA.po(iN,1) = mean(po_WOA_BWOA_iN); 
-    WOA_BWOA.BWOA_result{iN} = BWOA_result; % del
-    WOA_BWOA.WOA_result{iN}  = WOA_result; % del
-
     IWOA_BWOA.po(iN,1) = mean(po_IWOA_BWOA_iN); 
     PSO_BWOA.po(iN,1) = mean(po_PSO_BWOA_iN);
     
@@ -270,7 +263,7 @@ IOJOA.su = mean(su_IOJOA, 2);
 
 OFDMA.su = mean(su_OFDMA, 2);
 
-save('scriptN_results\resp_result\Script_N_10Real.mat', 'ALCA','WOA_BWOA', ...
+save('scriptN_results\newcode\Script_N.mat', 'ALCA','WOA_BWOA', ...
      "IWOA_BWOA", "PSO_BWOA", "ARJOA", "IOJOA", "OFDMA",'NoUsers', 'noRealizations')
 
 toc
