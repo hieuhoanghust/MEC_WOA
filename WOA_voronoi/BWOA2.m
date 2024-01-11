@@ -288,13 +288,13 @@ tic
 		    fprintf('iter:%i/%i, leader_score_woa:%i, leader_score_bwoa: %i\n', iter, maxIter, leader_score_woa, leader_score_bwoa)
         end
 
-		if doTol == 1 && iter > 5 && abs(leader_score_bwoa - leader_score_pre) < delta % && (leader_score_bwoa >=0)                           
+		if doTol == 1 && iter > 700 && abs(leader_score_bwoa - leader_score_pre) < delta % && (leader_score_bwoa >=0)                           
             flag = flag + 1; 
 		else 
 			flag = 0; 
 		end 
 		leader_score_pre = leader_score_bwoa; 
-		if flag == 20
+		if flag == 150
 			conver_curve = conver_curve(1, 1:iter); 
 			conver_curve_woa = conver_curve_woa(1:iter); 
 			conver_curve_woa_dl = conver_curve_woa_dl(1:iter); 

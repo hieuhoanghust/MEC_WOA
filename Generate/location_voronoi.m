@@ -195,7 +195,7 @@ if flag_plot
     legend('active UEs', 'inactive UEs', 'SBS');
     xlabel('$x$ [m]','Interpreter','LaTex');
     ylabel('$y$ [m]','Interpreter','LaTex');
-    save('pos_BS_UEs.mat', 'UEs', 'BS', "UE_BS")
+    % save('pos_BS_UEs.mat', 'UEs', 'BS', "UE_BS")
 end
 
 end

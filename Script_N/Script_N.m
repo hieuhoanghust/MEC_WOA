@@ -94,6 +94,7 @@ for iN = 1:length(NoUsers)
      
         var.eta     = params.beta_t .* params.D_n ./ (T_l);
         var.theta   = params.beta_e .* params.D_n ./ (params.zeta .* E_l);
+        var.Adet = [];
 
         %%%%%%%%%%%%%%%%%%%%%
         %       ALCA

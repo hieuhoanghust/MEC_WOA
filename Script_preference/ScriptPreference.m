@@ -8,7 +8,7 @@ addpath('..\Generate\')
 addpath('..\')
 load('..\Parameters\parameters2.mat')
 
-noRealizations = 3; % 200
+noRealizations = 200;
 M_ul = 3; 
 M_dl = 3;
 noBSs   = M_ul + M_dl;
