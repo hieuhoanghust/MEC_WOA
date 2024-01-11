@@ -13,9 +13,12 @@ load('..\Parameters\parameters2.mat')
 rng('default')
 
 noSearchAgents = 30;
-params.maxIter = 10000;
+params.maxIter = 1500;
+params.maxIter_woa = 100;
+
 %NoUsers = 2:7; % values of N
  NoUsers = 6; % to check convergence curve
+
 M_ul = 2; 
 M_dl = 2;
 noBSs   = M_ul + M_dl;
