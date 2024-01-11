@@ -56,8 +56,9 @@ for iN = 1:length(PMax)
 
     for iReal = 1:noRealizations
         fprintf('Pmax = %i/%i   iReal = %i/%i\n',PMax(iN), PMax(length(PMax)), iReal, noRealizations)
+        % =====================
         UEs.total = [4 6 10];
-        while UEs.total(1) ~= UEs.total(2) % force N_ul = N_dl trick to get average quicker
+        while UEs.total(1) ~= UEs.total(2)
             [UE_BS, UEs, BS] = location_voronoi(users_no, M_ul, M_dl, 0);
             % UE_BS_   == N_active x M matrix % matrix of relation of UEs and SBSs
             % UEs == 1x1 struct
