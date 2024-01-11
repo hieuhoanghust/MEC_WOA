@@ -17,7 +17,7 @@ params.maxIter = 1500;
 params.maxIter_woa = 100;
 
 %NoUsers = 2:7; % values of N
- NoUsers = 6; % to check convergence curve
+ NoUsers = 4; % 6 % to check convergence curve, we can plot the convergence curve based on the shown results on Command Window 
 
 M_ul = 2; 
 M_dl = 2;

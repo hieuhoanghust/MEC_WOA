@@ -28,9 +28,9 @@ tic
     M_dl = BS.total(2);
 
 	% initialization ======
-    %[positions] = Initialization2(functionName_, noSubcs, UEs, BS, UE_BS, noSearchAgents, var.Adet);
+    [positions] = Initialization2(functionName_, noSubcs, UEs, BS, UE_BS, noSearchAgents, var.Adet);
 	        % positions = (N_ul + M_dl) x K x noSA  matrix == position of noSA binary whales
-    positions = zeros(N_ul + M_dl, noSubcs, noSearchAgents);
+    positions = zero
 	leader_pos_bwoa = zeros(N_ul+M_dl, noSubcs); % position of the whale that makes the obj function get the best fitted value
 	leader_score_bwoa = -inf; % value of the best fitted obj function
 	leader_score_pre = leader_score_bwoa; 
