@@ -14,7 +14,8 @@ rng('default')
 
 noSearchAgents = 30;
 params.maxIter = 10000;
-NoUsers = 6:8; % values of N
+%NoUsers = 2:7; % values of N
+ NoUsers = 6; % to check convergence curve
 M_ul = 2; 
 M_dl = 2;
 noBSs   = M_ul + M_dl;
@@ -127,5 +128,5 @@ EX.po = mean(po_EX, 2);
 EX.su = mean(su_EX, 2);
 EX.time = mean(time_EX, 2);
 
-save('results\Script_compare.mat', 'BWOA', 'EX', 'NoUsers','sys_voronoi', 'noBSs', 'noSubcs');
+% save('results\Script_compare.mat', 'BWOA', 'EX', 'NoUsers','sys_voronoi', 'noBSs', 'noSubcs');
 

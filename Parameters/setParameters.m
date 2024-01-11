@@ -35,8 +35,7 @@ params.nu = 1e14;
 params.P_tol = 1.001;
 
 params.maxIter_woa = 300;
-params.maxIter = 100; 		%500
-% params.NoUsers = 100;	%5 15 25
+params.maxIter = 1500; 		%1500
 % params.noSubcs = 5;
 % params.noBSs   = 5;
 
